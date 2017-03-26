@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 hybrisSecurePort=$1
 
-gnome-terminal -e ". ./server.sh" --profile=Default && . ./_manualtests.sh ${hybrisSecurePort}
+terminalProfile=Default
+
+gnome-terminal -e ". ./server.sh" --profile=${terminalProfile} && . ./_manualtests.sh ${hybrisSecurePort}

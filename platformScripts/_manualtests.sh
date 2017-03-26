@@ -8,10 +8,6 @@ fi
 
 while ! echo exit | nc localhost ${port}; do sleep 1; done
 
-manualLog=manualTests.txt
-
-ant manualtests > ${manualLog}
-
-. ./_edit.sh ${manualLog}
+. ./_runWithLog.sh "ant manualtests"
 
 . ./hybrisserver.sh stop

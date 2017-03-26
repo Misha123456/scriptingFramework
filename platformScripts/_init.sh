@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
-initializeLogFileName=initializeLog.txt
 
-ant initialize > ${initializeLogFileName}
-
-. ./_edit.sh ${initializeLogFileName}
+. ./_runWithLog.sh "ant initialize"
