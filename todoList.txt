@@ -1,0 +1,3 @@
+- add logParsers
+- force checkstyle don't fail on first error, but check all the files, then parse all the logs to extract all the errors to single file
+
