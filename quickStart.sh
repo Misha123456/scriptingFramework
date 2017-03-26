@@ -14,7 +14,7 @@ echo extracting hybris commerce suite...
 unzip -q ${hybrisCommerceSuitePath} -d ${targetDirectory}
 
 # pull the required git branch and copy into Hybris folder
-./_pullAndMerge.sh ${repositoryFolder} ${repositoryBranch} ${targetDirectory}
+. ./_pullAndMerge.sh ${repositoryFolder} ${repositoryBranch} ${targetDirectory}
 
 # copy all the helpfull files into extracted hybris commerce suite
 cp -a platformScripts/. ${platformDirectory}/
@@ -22,10 +22,10 @@ cp -a platformScripts/. ${platformDirectory}/
 # delete all the .bat files from hybris commerce suite platform folder
 find ${platformDirectory}'/' -name '*.bat' -delete
 
-./_projectSpeciffic.sh ${targetDirectory}
+. ./_projectSpeciffic.sh ${targetDirectory}
 
 # run init option
 cd ${platformDirectory}
-./initAndStart.sh
+. ./initAndStart.sh
 
 cd ${platformDirectory}

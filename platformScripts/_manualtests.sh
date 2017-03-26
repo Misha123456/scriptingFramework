@@ -12,6 +12,6 @@ manualLog=manualTests.txt
 
 ant manualtests > ${manualLog}
 
-./_edit.sh ${manualLog}
+. ./_edit.sh ${manualLog}
 
-./hybrisserver.sh stop
+. ./hybrisserver.sh stop

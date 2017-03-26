@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-./invokeMain.sh;
+. ./invokeMain.sh;
 
-./stopSolr.sh;
+. ./stopSolr.sh;
 
 ant clean;
 
-./_init.sh;
+. ./_init.sh;
 
-./server.sh;
+. ./server.sh;

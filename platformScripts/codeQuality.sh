@@ -16,7 +16,7 @@ cd ${checkStyleDirectory}
 cp -f ${localextensionsFile} ${checkstyleBackUpFolder}'/'
 cp -f ${productionProfileLocalextensionsFile} ${configFolder}
 
-./setantenv.sh
+. . ./setantenv.sh
 
 ant checkstyle
 

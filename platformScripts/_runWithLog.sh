@@ -2,11 +2,14 @@
 
 commandToRun=$1
 logFile=$2
+sanitizedFileName=aa
 
 if [ -z "$logFile" ]
   then
-    logFile=${commandToRun}'.txt'
+    sanitizedFileName=$(echo "${commandToRun}" | tr '/' '_')
+    echo ${sanitizedFileName}
+    logFile="log_"${sanitizedFileName}".txt"
 fi
 
-${commandToRun} > ${logFile}
-./_edit.sh ${logFile}
+${commandToRun} > "${logFile}"
+. ./_edit.sh "${logFile}"

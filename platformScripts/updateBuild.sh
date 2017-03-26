@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ant clean;
 
-./invokeMain.sh;
+. ./invokeMain.sh;
 
-./rebuild.sh;
+. ./rebuild.sh;

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-./invokeMain.sh;
+. ./invokeMain.sh;
 
 ant server;
 
-./_init.sh;
+. ./_init.sh;

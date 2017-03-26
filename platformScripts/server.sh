@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-./hybrisserver.sh debug
+. ./hybrisserver.sh debug

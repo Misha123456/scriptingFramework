@@ -2,4 +2,4 @@
 
 file=$1
 
-subl ${file}
+subl "${file}"

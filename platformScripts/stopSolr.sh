@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-./setantenv.sh
+. ./setantenv.sh
 
 ant stopSolrServer

@@ -3,4 +3,4 @@ initializeLogFileName=initializeLog.txt
 
 ant initialize > ${initializeLogFileName}
 
-./_edit.sh ${initializeLogFileName}
+. ./_edit.sh ${initializeLogFileName}

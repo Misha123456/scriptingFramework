@@ -2,4 +2,4 @@
 
 file='../../../envprops/local/custom.local.properties'
 
-./_edit.sh ${file}
+. ./_edit.sh ${file}
