@@ -27,5 +27,3 @@ find ${platformDirectory}'/' -name '*.bat' -delete
 # run init option
 cd ${platformDirectory}
 . ./initAndStart.sh
-
-cd ${platformDirectory}
