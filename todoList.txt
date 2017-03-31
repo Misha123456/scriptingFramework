@@ -1,3 +1,8 @@
-- add logParsers
-- force checkstyle don't fail on first error, but check all the files, then parse all the logs to extract all the errors to single file
-
+CRITICAL - handshake localextensions.xml file during fullChecks.sh
+CRITICAL - configure output folders for tests (unit, integration, manual)
+CRITICAL - add option for manualtests to run server or not
+CRITICAL - add option for manualtests to make initialization or not
+MAJOR    - Open test reports with chrome
+MAJOR    - add logParsers
+MINOR    - add decompiler and shortcut to run
+MINOR    - force checkstyle don't fail on first error, but check all the files, then parse all the logs to extract all the errors to single file
