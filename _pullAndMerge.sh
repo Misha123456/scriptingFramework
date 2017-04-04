@@ -10,5 +10,5 @@ currentFolder=${PWD}
 cd ${repositoryFolder}
 git checkout ${repositoryBranch}
 git pull
-cp -Rf ${repositoryFolder}/. $targetDirectory/
+cp -Rf ${repositoryFolder}/. ${targetDirectory}/
 cd ${currentFolder}

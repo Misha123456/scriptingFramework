@@ -8,6 +8,6 @@ fi
 
 while ! echo exit | nc localhost ${port}; do sleep 1; done
 
-. ./_runWithLog.sh "ant manualtests"
+. ./_runWithLog.sh "ant initialize manualtests"
 
 . ./hybrisserver.sh stop
