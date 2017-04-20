@@ -7,22 +7,79 @@ configFolder=${platformFolder}'/../../config'
 localextensionsFile=${configFolder}'/localextensions.xml'
 productionProfileLocalextensionsFile=${platformFolder}'/../../../configtemplates/production/localextensions.xml'
 
-# backup and replace current localextensions.xml with fullChecks enough file
-cp -f ${localextensionsFile} ${fullChecksBackUpFolder}'/'
-cp -f ${productionProfileLocalextensionsFile} ${configFolder}
+doHandShakeLocalextensions=$1
+doClean=$2
+doInvokeMain=$3
+doCodeQuality=$4
+doAntAll=$5
+doUnitTests=$6
+doIntegrationTests=$7
+doInitializeJunitTenant=$8
+doManualTests=$9
+doInitialization=${10}
+hybrisSecurePort=${11}
 
+SECONDS=0;
 
-ant clean
+if [ -z "$hybrisSecurePort" ];
+  then
+    echo "use default hybris secure port (9002)"
+    hybrisSecurePort=9002
+fi
 
-. ./invokeMain.sh
+. ./stopHybrisIfRunning.sh ${hybrisSecurePort}
 
-. ./codeQuality.sh
+if ${doHandShakeLocalextensions};
+  then
+    # backup and replace current localextensions.xml with fullChecks enough file
+    mkdir ${fullChecksBackUpFolder}
+    cp -f ${localextensionsFile} ${fullChecksBackUpFolder}'/'
+    cp -f ${productionProfileLocalextensionsFile} ${configFolder}
+fi
 
-ant all
+if ${doClean};
+  then
+    ant clean
+fi
 
-. ./_runHybrisTests.sh "ant unittests" "tests/junit"
-. ./_runWithLog.sh "ant yunitinit" && . ./_runHybrisTests.sh "ant integrationtests" "tests/integration"
-. ./_runWithLog.sh ". ./manualtests.sh"
+if ${doInvokeMain};
+  then
+    . ./invokeMain.sh
+fi
 
-# replace fullChecks enough file with current localextensions.xml
-cp -f ${fullChecksBackUpFolder}'/localextensions.xml' ${configFolder}
+if ${doCodeQuality};
+  then
+    . ./codeQuality.sh
+fi
+
+if ${doAntAll};
+  then
+    . ./_runWithLog.sh "ant all"
+fi
+
+if ${doUnitTests};
+  then
+    . ./_runHybrisTests.sh "ant unittests" "tests/junit"
+fi
+
+if ${doIntegrationTests};
+  then
+    if ${doInitializeJunitTenant};
+        then
+        . ./_runWithLog.sh "ant yunitinit"
+    fi
+    . ./_runHybrisTests.sh "ant integrationtests" "tests/integration"
+fi
+
+if ${doManualTests};
+  then
+    . ./_runWithLog.sh ". ./manualtests.sh ${hybrisSecurePort} ${doInitialization}"
+fi
+
+if ${doHandShakeLocalextensions};
+  then
+    # replace fullChecks enough file with current localextensions.xml
+    cp -f ${fullChecksBackUpFolder}'/localextensions.xml' ${configFolder}
+fi
+
+echo "Full checks finished in " $SECONDS " seconds"

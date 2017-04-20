@@ -4,7 +4,7 @@ skipInitialization=$2
 
 terminalProfile=Default
 
-if ! ${skipInitialization};
+if ${skipInitialization};
   then
     . ./_runWithLog.sh "ant initialize"
 fi
