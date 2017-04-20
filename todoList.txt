@@ -1,8 +1,8 @@
-CRITICAL - handshake localextensions.xml file during fullChecks.sh
-CRITICAL - configure output folders for tests (unit, integration, manual)
-CRITICAL - add option for manualtests to run server or not
-CRITICAL - add option for manualtests to make initialization or not
-MAJOR    - Open test reports with chrome
+CRITICAL - handshake localextensions.xml file during fullChecks.sh - fixed on Apr 20
+CRITICAL - configure output folders for tests (unit, integration, manual) - fixed on Apr 20
+CRITICAL - add option for manualtests to run server or not - fixed on Apr 20
+CRITICAL - add option for manualtests to make initialization or not - fixed on Apr 20
+MAJOR    - Open test reports with chrome - fixed on Apr 20
 MAJOR    - add logParsers
 MINOR    - add decompiler and shortcut to run
 MINOR    - force checkstyle don't fail on first error, but check all the files, then parse all the logs to extract all the errors to single file
