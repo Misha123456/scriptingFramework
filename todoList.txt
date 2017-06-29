@@ -1,3 +1,4 @@
+CRITICAL - Ability to hold idea configured (output folders)
 MAJOR    - create a script to create symlinks to setantenv in all the custom extensions
 MAJOR    - create a script to change idea output folder config (using existed solution (.class file))
 MAJOR    - add logParsers
