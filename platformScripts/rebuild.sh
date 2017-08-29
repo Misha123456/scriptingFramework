@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-ant all;
-. ./server.sh;
+ant all && . ./server.sh

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # provide the params to quickstart hybris development
-catalogRoot='/media/mikhail/fd1ad2f6-4a8c-4de6-9203-5d35f9cdea4a'
-targetDirectory=${catalogRoot}'/h1'
-hybrisCommerceSuitePath=${catalogRoot}'/installers/hybris/HYBRIS-6.3.zip'
+catalogRoot='/mnt/b72c5a51-4de0-4cd2-800b-a9e788068220'
+targetDirectory=${catalogRoot}'/m1'
+hybrisCommerceSuitePath=${catalogRoot}'/installers/hybris/HYBRIS-6.4.0.3.zip'
 repositoryFolder=${catalogRoot}'/epmespvelc'
 repositoryBranch='develop'
 

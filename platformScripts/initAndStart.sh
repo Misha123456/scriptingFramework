@@ -3,8 +3,4 @@
 
 . ./stopSolr.sh;
 
-ant clean;
-
-. ./_init.sh;
-
-. ./server.sh;
+ant clean && . ./_init.sh && . ./server.sh;
