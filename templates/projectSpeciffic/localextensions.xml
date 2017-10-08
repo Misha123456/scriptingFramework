@@ -8,8 +8,5 @@
 
 		<path dir="${HYBRIS_BIN_DIR}" />
 
-		<extension name='velcomintegrations'/>
-		<extension name='velcomcore'/>
-
 	</extensions>
 </hybrisconfig>

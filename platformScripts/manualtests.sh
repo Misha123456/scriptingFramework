@@ -2,6 +2,8 @@
 hybrisSecurePort=$1
 skipInitialization=$2
 
+CURRENT_FOLDER=${PWD}
+hybrisPlatformHome="../../../../../platform"
 terminalProfile=Default
 
 if ${skipInitialization};
@@ -11,7 +13,11 @@ fi
 
 if ! echo exit | nc localhost ${hybrisSecurePort};
   then
-   gnome-terminal -e "./server.sh" --profile=${terminalProfile}
+cd ${hybrisPlatformHome}
+   gnome-terminal -e "./hybrisserver.sh" --profile=${terminalProfile}
 fi
+   cd ${CURRENT_FOLDER}
 
 . ./_manualtests.sh ${hybrisSecurePort}
+
+cd ${CURRENT_FOLDER}

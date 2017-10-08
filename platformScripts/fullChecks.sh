@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 currentFolder=${PWD}
-platformFolder=${currentFolder}
-fullChecksDirectory=${platformFolder}'/../custom/buildscripts/resources/buildscripts/ant'
-fullChecksBackUpFolder=${fullChecksDirectory}'/fullChecksBackUpFolder'
+platformFolder="../../../../../../platform"
+fullChecksBackUpFolder='/fullChecksBackUpFolder'
 configFolder=${platformFolder}'/../../config'
 localextensionsFile=${configFolder}'/localextensions.xml'
 productionProfileLocalextensionsFile=${platformFolder}'/../../../configtemplates/production/localextensions.xml'

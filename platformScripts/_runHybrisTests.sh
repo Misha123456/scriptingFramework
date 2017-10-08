@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+hybrisLogDir=realpath "../../../../../../log"
+
 commandToRun=$1
 logDir=$2
 if [ -z "$logDir" ]
@@ -9,6 +11,8 @@ fi
 
 echo "Running browser log command \""${commandToRun}"\" ..."
 
-${commandToRun} "-DHYBRIS_LOG_DIR="${logDir}
+targetLogDir="${hybrisLogDir}/${logDir}"
 
-. ./_openInBrowser.sh "${logDir}"/junit/index.html
+${commandToRun} "-DHYBRIS_LOG_DIR="${targetLogDir}
+
+. ./_openInBrowser.sh "${targetLogDir}"/junit/index.html

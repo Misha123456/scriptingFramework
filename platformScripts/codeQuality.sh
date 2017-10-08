@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 currentFolder=${PWD}
-platformFolder=${currentFolder}
-checkstyleLogFolder=${currentFolder}'/../../log/checkstyle'
-checkStyleDirectory=${platformFolder}'/../custom/buildscripts/resources/buildscripts/ant'
-checkstyleBackUpFolder=${checkStyleDirectory}'/checkstyleBackUpFolder'
+platformFolder="../../../../../platform"
+checkstyleLogFolder='../../../../../../log/checkstyle'
+checkstyleBackUpFolder='/checkstyleBackUpFolder'
 configFolder=${platformFolder}'/../../config'
 localextensionsFile=${configFolder}'/localextensions.xml'
 productionProfileLocalextensionsFile=${platformFolder}'/../../../configtemplates/production/localextensions.xml'
 
 mkdir ${checkstyleBackUpFolder}
-
-cd ${checkStyleDirectory}
 
 # backup and replace current localextensions.xml with checkstyle enought file
 cp -f ${localextensionsFile} ${checkstyleBackUpFolder}'/'

@@ -4,5 +4,5 @@
 # We need remember previous location due to implementation of hybris setantenv.sh then uses line "export PLATFORM_HOME=`pwd`"
 ORIGINAL_LOCATION=`pwd`
 cd ../../../../../platform
-. ./hybrisserver.sh debug
+. ./setantenv.sh
 cd $ORIGINAL_LOCATION
