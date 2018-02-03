@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 currentFolder=${PWD}
-platformFolder="../../../../../platform"
-checkstyleLogFolder='../../../../../../log/checkstyle'
-checkstyleBackUpFolder='/checkstyleBackUpFolder'
+platformFolder=${currentFolder}"/../../../../../platform"
+checkstyleLogFolder=${currentFolder}'/../../../../../../log/checkstyle'
+checkstyleBackUpFolder=${currentFolder}'/checkstyleBackUpFolder'
 configFolder=${platformFolder}'/../../config'
 localextensionsFile=${configFolder}'/localextensions.xml'
 productionProfileLocalextensionsFile=${platformFolder}'/../../../configtemplates/production/localextensions.xml'

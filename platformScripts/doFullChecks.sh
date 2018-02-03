@@ -2,7 +2,7 @@
 
 doHandShakeLocalextensions=true
 doClean=true
-doInvokeMain=true
+doInvokeMain=false
 doCodeQuality=true
 doAntAll=true
 doUnitTests=true

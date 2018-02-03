@@ -8,5 +8,16 @@
 
 		<path dir="${HYBRIS_BIN_DIR}" />
 
+		<extension name="buildscripts"/>
+
+		<extension name="velcomfacades"/>
+		<extension name="velcombackoffice"/>
+		<extension name="velcomfulfilmentprocess"/>
+		<extension name="velcominitialdata"/>
+		<extension name="velcomsampledata"/>
+		<extension name='velcomcustomerdata'/>
+		<extension name="velcomintegrations"/>
+		<extension name='wiremock'/>
+
 	</extensions>
 </hybrisconfig>

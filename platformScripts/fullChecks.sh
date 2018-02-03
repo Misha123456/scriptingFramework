@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 currentFolder=${PWD}
-platformFolder="../../../../../../platform"
-fullChecksBackUpFolder='/fullChecksBackUpFolder'
+platformFolder=${currentFolder}"/../../../../../platform"
+fullChecksBackUpFolder=${currentFolder}'/fullChecksBackUpFolder'
 configFolder=${platformFolder}'/../../config'
 localextensionsFile=${configFolder}'/localextensions.xml'
 productionProfileLocalextensionsFile=${platformFolder}'/../../../configtemplates/production/localextensions.xml'
@@ -38,7 +38,7 @@ fi
 
 if ${doClean};
   then
-    ant clean
+    ant fastClean
 fi
 
 if ${doInvokeMain};
@@ -53,7 +53,7 @@ fi
 
 if ${doAntAll};
   then
-    . ./_runWithLog.sh "ant all"
+    . ./_runWithLog.sh "ant fastAllWithCss"
 fi
 
 if ${doUnitTests};
@@ -81,4 +81,4 @@ if ${doHandShakeLocalextensions};
     cp -f ${fullChecksBackUpFolder}'/localextensions.xml' ${configFolder}
 fi
 
-echo "Full checks finished in " $SECONDS " seconds"
+echo "Full checks finished in" $SECONDS "seconds"

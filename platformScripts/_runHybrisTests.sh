@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-hybrisLogDir=realpath "../../../../../../log"
+hybrisLogDir=$(realpath "${PWD}/../../../../../../log")
 
 commandToRun=$1
 logDir=$2

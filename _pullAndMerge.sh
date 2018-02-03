@@ -11,4 +11,5 @@ cd ${repositoryFolder}
 git checkout ${repositoryBranch}
 git pull
 cp -Rf ${repositoryFolder}/. ${targetDirectory}/
+git reset --hard
 cd ${currentFolder}

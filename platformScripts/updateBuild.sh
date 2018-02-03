@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ant clean && . ./invokeMain.sh && . ./rebuild.sh;
+. ./invokeMain.sh && . ./rebuild.sh -c;

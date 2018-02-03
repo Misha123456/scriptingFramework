@@ -1,2 +1,11 @@
 #!/usr/bin/env bash
-ant all && . ./server.sh
+
+doClean=$1
+
+if [ $doClean="-c" ];
+  then
+    echo "clean before build"
+    ant fastClean
+fi
+
+ant fastAll && . ./server.sh

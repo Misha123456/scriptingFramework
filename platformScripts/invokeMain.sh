@@ -3,5 +3,6 @@ currentFolder=${PWD};
 scriptFolder=${currentFolder}"/../../../../../../../scripts";
 
 cd ${scriptFolder};
-. ./custom-local-setup-config.sh;
+ant createConfig -Dtemplate=develop_ui -Denv=local -Dtype=custom
+ant customize
 cd ${currentFolder};
