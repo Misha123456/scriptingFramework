@@ -3,4 +3,4 @@
 
 . ./stopSolr.sh;
 
-ant fastClean fastAllWithCss && . ./_init.sh && . ./server.sh;
+ant fastClean fastAllWithResources && . ./_init.sh && . ./server.sh;

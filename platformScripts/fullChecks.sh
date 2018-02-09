@@ -53,7 +53,7 @@ fi
 
 if ${doAntAll};
   then
-    . ./_runWithLog.sh "ant fastAllWithCss"
+    . ./_runWithLog.sh "ant fastAllWithResources"
 fi
 
 if ${doUnitTests};
