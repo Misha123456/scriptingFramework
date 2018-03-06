@@ -2,10 +2,9 @@
 
 doClean=$1
 
-if [ $doClean="-c" ];
+if [ "$doClean" = "-c" ];
   then
     echo "clean before build"
     ant fastClean
 fi
-
 ant fastAll && . ./server.sh
