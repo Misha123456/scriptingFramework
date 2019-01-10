@@ -23,18 +23,18 @@ echo ${targetDirectory}
 developProfileDirectory=${targetDirectory}'/configtemplates/develop'
 scriptsFolder=${targetDirectory}'/hybris/bin/custom/buildscripts/resources/buildscripts/ant'
 repositoryFolder=${catalogRoot}'/epmespvelc'
-pathToHybrisCommerceSuiteArchive=${catalogRoot}'/installers/hybris/HYBRIS-6.4.0.3.zip'
+pathToHybrisCommerceSuiteArchive='/installers/hybris/HYBRIS-6.4.0.3.zip'
 
 
 # Steps to execute
-doExtractHybris=true
+doExtractHybris=false
 doPullAndMerge=true
 doCopyPlatformScripts=true
 doRemoveBatFiles=true
 doCopyProjectSpecificFiles=true
-doReplaceLocalExtensionsFile=true
-doInitialBuild=true
-doInitAndStart=false
+doReplaceLocalExtensionsFile=false
+doInitialBuild=false
+doInitAndStart=true
 
 if ${doExtractHybris};
   then

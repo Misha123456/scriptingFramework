@@ -38,7 +38,7 @@ fi
 
 if ${doClean};
   then
-    ant fastClean
+    ant clean
 fi
 
 if ${doInvokeMain};
@@ -53,7 +53,7 @@ fi
 
 if ${doAntAll};
   then
-    . ./_runWithLog.sh "ant fastAllWithResources"
+    . ./_runWithLog.sh "ant all"
 fi
 
 if ${doUnitTests};

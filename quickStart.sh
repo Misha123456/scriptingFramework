@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-targetBranch="develop"
-targetDirectory="/m4"
+targetBranch="feature/EPMESPVEL-37372"
+targetDirectory="/m2"
 
 . ./_quickStart.sh ${targetBranch} ${targetDirectory}
