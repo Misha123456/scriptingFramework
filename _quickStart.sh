@@ -27,7 +27,7 @@ pathToHybrisCommerceSuiteArchive='/installers/hybris/HYBRIS-6.4.0.3.zip'
 
 
 # Steps to execute
-doExtractHybris=false
+doExtractHybris=true
 doPullAndMerge=true
 doCopyPlatformScripts=true
 doRemoveBatFiles=true
