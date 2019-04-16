@@ -13,7 +13,7 @@ fi
 
 ant clean all && . ./_init.sh;
 
-if [ "doInitJunit" = "-u" ];
+if [ "$doInitJunit" = "-u" ];
   then
     ant yunitinit
 fi
