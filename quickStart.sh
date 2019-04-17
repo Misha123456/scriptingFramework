@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 targetBranch="develop"
-targetDirectory="/m5"
+targetDirectory="/m4"
 
 . ./_quickStart.sh ${targetBranch} ${targetDirectory}

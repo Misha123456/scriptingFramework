@@ -28,7 +28,7 @@ pathToHybrisCommerceSuiteArchive='/installers/hybris/HYBRIS-1808.zip'
 
 # Steps to execute
 doExtractHybris=false
-doPullAndMerge=false
+doPullAndMerge=true
 doCopyPlatformScripts=true
 doRemoveBatFiles=true
 doCopyProjectSpecificFiles=true
